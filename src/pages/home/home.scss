@@ -1,3 +1,38 @@
-page-home {
 
-}
+    .item{
+    box-shadow: 0px 2px 5px grey;
+    }
+
+    .card-background-page {
+
+        ion-card {
+          position: relative;
+  
+        }
+      
+        .card-title {
+          position: absolute;
+          top: 70%;
+          font-size: 1em;
+          width: 100%;
+          font-weight: bold;
+          color: #fff;
+          text-shadow: 0px 0px 13px black;
+          padding-left: 10px;
+        }
+      
+        .card-subtitle {
+          font-size: 1.0em;
+          position: absolute;
+          top: 90%;
+          width: 100%;
+          color: #fff;
+          text-shadow: 0px 0px 13px black;
+          padding-left: 10px;
+        }
+      
+      }
+      .image{
+        height: 250px;
+      }
+

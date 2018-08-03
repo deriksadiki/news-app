@@ -1,17 +1,21 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Contact
+  <ion-navbar color="primary">
+    <ion-title style="text-align: center">
+    Favourite Stories
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
-  <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
-    </ion-item>
-  </ion-list>
+    <ion-list *ngFor="let i of newsARR; let i = index ">
+        <br>
+        <ion-item (click)="more(i)">
+          <ion-thumbnail item-start>
+            <img [src]="i.image">
+          </ion-thumbnail>
+          <h5>{{i.title}}</h5>
+          <p>{{i.description}}</p>
+          <p><ion-icon ios="ios-calendar" md="md-calendar"></ion-icon>  {{i.date | date:'MMM/dd/yyyy'}}</p>
+        </ion-item>
+      </ion-list>
 </ion-content>
