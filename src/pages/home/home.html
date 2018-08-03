@@ -4,7 +4,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content>
   <div class="card-background-page">
     <ion-card (click)="mainStory()">
         <img class="image" src={{img}}>
@@ -13,9 +13,9 @@
       </ion-card>
     </div>
 
-    <ion-list *ngFor="let i of newsARR; let i = index ">
+    <ion-list >
       <br>
-      <ion-item (click)="more(i)">
+      <ion-item *ngFor="let i of newsARR; let i = index " (click)="more(i)">
         <ion-thumbnail item-start>
           <img [src]="i.urlToImage">
         </ion-thumbnail>

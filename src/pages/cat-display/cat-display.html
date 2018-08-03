@@ -18,8 +18,8 @@
     </div>
 
 
-  <ion-list *ngFor="let i of newsARR; let i = index ">
-    <ion-item (click)="more(i)">
+  <ion-list >
+    <ion-item *ngFor="let i of newsARR; let i = index " (click)="more(i)">
       <ion-thumbnail item-start>
         <img [src]="i.urlToImage">
       </ion-thumbnail>
