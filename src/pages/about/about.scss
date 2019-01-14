@@ -5,7 +5,7 @@ page-about {
     .grid-full ion-col {
         flex: 0 0 50%;
         max-width: 50%;
-        padding: 5px 0;
+        padding: 20px 0;
     }
     .row {
         padding: 0 12px;
@@ -17,6 +17,7 @@ page-about {
         margin: 0 5px;
         width: calc(100% - 10px);
         padding: 14px;
+        height: 130%;
         box-shadow: 3px 3px 3px 3px rgba(0, 0, 0, 0.1);
         border-radius: 2%;
         h1 {

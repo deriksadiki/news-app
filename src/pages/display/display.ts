@@ -26,12 +26,14 @@ export class DisplayPage {
   pic;
   des;
   colour;
+  colour2 = [];
   answe = 0;
   url;
   constructor(public navCtrl: NavController, public navParams: NavParams, private db:DatabaseProvider) {
   }
 
   ionViewDidLoad() {
+  
     if (this.obj != null || this.obj != undefined){
     this.title = this.obj.title;
     this.author =  this.obj.author;
@@ -39,6 +41,10 @@ export class DisplayPage {
     this.pic = this.obj.urlToImage;
     this.des =  this.obj.description;
     this.url = this.obj.url;
+    this.db.getColourState(this.url).then((data:any) =>{
+      this.colour2 = data;
+    }, (error) => {
+    });   
   }
 else if (this.obj2 != null || this.obj2 != undefined){
   this.title = this.obj2.title;

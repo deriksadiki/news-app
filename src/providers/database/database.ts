@@ -75,6 +75,25 @@ export class DatabaseProvider {
     })
   }
 
+
+  getColourState(url){
+    return new Promise ((resolve, reject) => {
+      this.db.executeSql("SELECT * FROM favourites WHERE url = ?", [url]).then((data) => {
+        let arrayUsers = [];
+        if (data.rows.length > 0) {
+          for (var i = 0; i < data.rows.length; i++) {
+            arrayUsers.push({
+              colour: data.rows.item(i).colour,
+            });       
+          }          
+        }   
+        resolve(arrayUsers);
+      }, (error) => {
+        reject(error);
+      })
+    })
+  }
+
   deleteFavourite(url){
     return new Promise ((resolve, reject) => {
       let sql = "DELETE FROM favourites WHERE url IN (?)";
